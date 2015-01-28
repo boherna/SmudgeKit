@@ -40,8 +40,8 @@
 
         CGFloat radius = 20.0;
         self.path = CGPathCreateWithEllipseInRect(CGRectMake(-radius, -radius, radius*2, radius*2), NULL);
-        self.fillColor = [UIColor colorWithWhite:0.9 alpha:0.9].CGColor;
-        self.strokeColor = [UIColor colorWithWhite:0.0 alpha:0.35].CGColor;
+        self.fillColor = [[StylesManager currentStyle] colorForProperty:kStylePropertyWindowTouchesColor].CGColor;
+        self.strokeColor = [[StylesManager currentStyle] colorForProperty:kStylePropertyWindowTouchesColor].CGColor;
         self.lineWidth = 1;
 
         self.shadowPath = self.path;
